@@ -1,0 +1,257 @@
+body {
+    font-family: 'Abhaya Libre', serif;
+    color: #f06e94;
+    margin: 0; 
+    overflow-x: hidden; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.navbar {
+    background-color: #feb7dd;
+    z-index: 1030;
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Abhaya Libre', serif;
+    color: #f06e94;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+header {
+    background: linear-gradient(135deg, #f06e95, #b86dae, #eaafc8);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5%;
+    color: #ffafda;
+    z-index: 1;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.btn-outline-light {
+    color: #ffafdadc;
+    border-color: pink;
+    margin-top: 1.5rem; 
+    margin-bottom: 1.5rem;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffafda;
+    color: white;
+}
+
+.carousel-item {
+    height: 630px;
+}
+
+.carousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+footer {
+    background-color: #eaafc8;
+}
+
+.header-text {
+    max-width: 50%; 
+}
+
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 100px; 
+}
+
+.btn-time {
+    background-color: #ffafda;
+    color: white;
+    font-family: 'Orbitron'; 
+    border: none;
+    padding: 15px 30px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    position: fixed;
+    top: 80px; 
+    right: 20px;
+    z-index: 1000;
+    opacity: 1; 
+    pointer-events: auto; 
+}
+.btn-time.hidden {
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+.btn-time:hover {
+    background-color: #000000;
+    font-family: 'Orbitron'; 
+    font-size: 15px;
+    color: #f06e94
+}
+.btn-pink {
+    background-color: #ffafda; 
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-pink:hover {
+    background-color: #f06e94;
+}
+#glitter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+.glitter {
+    position: absolute;
+    width: 10px; 
+    height: 10px; 
+    background: radial-gradient(circle, #ffafda, #feb7dd, #ffffff);
+    border-radius: 50%;
+    animation: glitter-fall 4s linear forwards;
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(255, 175, 218, 0.5);
+}
+
+@keyframes glitter-fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        height: auto; 
+        padding: 20px 5%;
+    }
+
+    h1 {
+        font-size: 50px; 
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem; 
+    }
+}
+
+.dark-mode {
+    background-color: #000000;
+}
+
+.dark-mode .navbar {
+    background-color: #bd546e !important; 
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .navbar-nav .nav-link {
+    color: #FFBBCC; 
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+    color: #ff1491a3; 
+    text-decoration: underline;
+}
+
+.dark-mode .navbar-toggler {
+    border-color: #FFBBCC; 
+}
+
+
+.dark-mode header {
+    background: linear-gradient(135deg, #a54465, #892359, #3c1a41);
+    color: #e06f8b; 
+}
+
+.dark-mode section {
+    background-color: #000000 !important;
+    color: #ff149195; 
+}
+
+.dark-mode .card {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #FFBBCC;
+}
+
+.dark-mode .btn-pink, 
+.dark-mode .btn-outline-light, 
+.dark-mode .btn-time {
+    background-color: #c51952bc; 
+    color: #FFBBCC; 
+    border: 1px solid #FFBBCC; 
+}
+
+.dark-mode .btn-pink:hover, 
+.dark-mode .btn-outline-light:hover, 
+.dark-mode .btn-time:hover {
+    background-color: #db5c86d5; 
+    color: #FFFFFF; 
+}
+
+.dark-mode footer {
+    background-color: #bd546e !important; 
+    color: #FFBBCC; 
+
+}
+
+.dark-mode .glitter {
+    background: radial-gradient(circle, #cb566084, #88275b, #a93276);
+
+}
+
+
+.mode {
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%; 
+    width: 70px; 
+    height: 70px;
+    position: fixed;
+    top: 500px; 
+    right: 20px;
+    z-index: 1000;
+    background-color: transparent;
+    opacity: 1; 
+    pointer-events: auto; 
+}
+
+.button-icon {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+}
+
+.dark-mode .button-icon {
+    content: url('sun.png'); 
+}

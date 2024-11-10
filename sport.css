@@ -1,0 +1,230 @@
+body {
+    font-family: 'Abhaya Libre', serif;
+    color: #f06e94;
+    margin: 0;
+    overflow-x: hidden; 
+}
+
+.navbar {
+    background-color: #feb7dd;
+    z-index: 1030;
+    position: relative;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Abhaya Libre', serif;
+    color: #f06e94;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+header {
+    background: linear-gradient(135deg, #f06e95, #b86dae, #eaafc8);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #ffafda;
+    z-index: 1;
+    position: relative;
+}
+
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.btn-outline-light {
+    color: #ffafdadc;
+    border-color: pink;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffafda;
+    color: white;
+}
+
+.carousel-container {
+    max-width: 50%; 
+    margin: 0 auto; 
+    padding-bottom: 3rem;
+    z-index: 0; 
+    position: relative;
+}
+
+.carousel-item {
+    height: 50vh; 
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+footer {
+    background-color: #eaafc8;
+}
+
+.header-text {
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+.card img {
+    object-fit: cover;
+    height: 300px; 
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+#glitter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+.glitter {
+    position: absolute;
+    width: 10px; 
+    height: 10px; 
+    background: radial-gradient(circle, #ffafda, #feb7dd, #ffffff);
+    border-radius: 50%;
+    animation: glitter-fall 4s linear forwards;
+    opacity: 0.9;
+    box-shadow: 0 0 10px rgba(255, 175, 218, 0.5);
+}
+
+@keyframes glitter-fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-container {
+        max-width: 90%;
+    }
+}
+
+.greeting-container {
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.dark-mode {
+    background-color: #000000;
+}
+
+.dark-mode .navbar {
+    background-color: #bd546e !important; 
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .navbar-nav .nav-link {
+    color: #FFBBCC; 
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+    color: #ff1491a3; 
+    text-decoration: underline;
+}
+
+.dark-mode .navbar-toggler {
+    border-color: #FFBBCC; 
+}
+
+
+.dark-mode header {
+    background: linear-gradient(135deg, #a54465, #892359, #3c1a41);
+    color: #e06f8b; 
+}
+
+.dark-mode section {
+    background-color: #000000 !important;
+    color: #ff149195; 
+}
+
+.dark-mode .card {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #FFBBCC;
+}
+
+.dark-mode .btn-pink, 
+.dark-mode .btn-outline-light, 
+.dark-mode .btn-time {
+    background-color: #c51952bc; 
+    color: #FFBBCC; 
+    border: 1px solid #FFBBCC; 
+}
+
+.dark-mode .btn-pink:hover, 
+.dark-mode .btn-outline-light:hover, 
+.dark-mode .btn-time:hover {
+    background-color: #db5c86d5; 
+    color: #FFFFFF; 
+}
+
+.dark-mode footer {
+    background-color: #bd546e !important; 
+    color: #FFBBCC; 
+
+}
+
+.dark-mode .glitter {
+    background: radial-gradient(circle, #cb566084, #88275b, #a93276);
+
+}
+
+
+.mode {
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%; 
+    width: 70px; 
+    height: 70px;
+    position: fixed;
+    top: 500px; 
+    right: 20px;
+    z-index: 1000;
+    background-color: transparent;
+    opacity: 1; 
+    pointer-events: auto; 
+}
+
+.button-icon {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+}
+
+.dark-mode .button-icon {
+    content: url('sun.png'); 
+}
